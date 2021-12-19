@@ -28,7 +28,6 @@ public class QuizQuestionsActivity extends AppCompatActivity {
     private ImageView backward, forward, help,backButton;
     int chance = 1;
 
-    Model model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +42,6 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         backward = findViewById(R.id.backward);
         help = findViewById(R.id.help);
         backButton=findViewById(R.id.back_btn);
-        backButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
 
         questionModelArrayList = new ArrayList<>();
         random = new Random();
@@ -106,6 +99,12 @@ public class QuizQuestionsActivity extends AppCompatActivity {
             }
         });
 
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         optionBtnTrue.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,10 +141,12 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         //displaying scores
         scores.setText("" + currentScore);
 
+        String category=getIntent().getStringExtra("category");
         if (questionAttempted == 10) {
             Intent intent = new Intent(QuizQuestionsActivity.this, Result.class);
             intent.putParcelableArrayListExtra("Pairs", passedQuestions);
             intent.putExtra("Scores", scores.getText());
+            intent.putExtra("category",category);
             startActivity(intent);
             this.finish();
         } else {

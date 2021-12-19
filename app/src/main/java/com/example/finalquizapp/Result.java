@@ -38,6 +38,8 @@ public class Result extends AppCompatActivity {
         questionNumber.setText(scores);
 
 
+        String category=getIntent().getStringExtra("category");
+
         switch (scores) {
             case "1":
                 ratingBar.setRating((float) 0.5);
@@ -100,9 +102,10 @@ public class Result extends AppCompatActivity {
 //                startActivity(intent);
 //                finish();
 //
-                Intent intent = new Intent(Result.this, SubjectsActivity.class);
+                Intent intent = new Intent(Result.this, QuizQuestionsActivity.class);
+                intent.putExtra("category",category);
                 startActivity(intent);
-//                finish();
+                finish();
             }
         });
         ImageView appHomeScreen = (ImageView) findViewById(R.id.homeScreen);
