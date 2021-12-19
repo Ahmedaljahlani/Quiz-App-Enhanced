@@ -3,14 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/drawable-v24/ic_baseline_arrow_forward_24.xml" value="0.15185185185185185" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/drawable-v24/rounded_button.xml" value="0.1" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/drawable-v24/rounded_list.xml" value="0.1962962962962963" />
+        <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/drawable/ic_baseline_arrow_back_ios_24.xml" value="0.15185185185185185" />
+        <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/drawable/ic_baseline_arrow_forward_ios_24.xml" value="0.15185185185185185" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/drawable/rounded_actionbar.xml" value="0.1" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_help.xml" value="0.15806159420289856" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_main.xml" value="0.19655797101449277" />
-        <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_quiz_questions.xml" value="0.16428571428571428" />
+        <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_quiz_questions.xml" value="0.1" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_result.xml" value="0.15806159420289856" />
-        <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_review_answers.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_review_answers.xml" value="0.4" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/activity_subjects.xml" value="0.116751269035533" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/appbar.xml" value="0.264" />
         <entry key="..\:/Users/EXA/Downloads/Compressed/FinalQuizApp/app/src/main/res/layout/appbar_without_backbtn.xml" value="0.1411042944785276" />

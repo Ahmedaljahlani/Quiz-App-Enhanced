@@ -25,7 +25,7 @@ public class QuizQuestionsActivity extends AppCompatActivity {
     Random random;
     int currentScore = 0, questionAttempted = 0, current = 0, previous;
 
-    private ImageView backward, forward, help;
+    private ImageView backward, forward, help,backButton;
     int chance = 1;
 
     Model model;
@@ -42,6 +42,13 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         optionBtnFalse = findViewById(R.id.optionFalse);
         backward = findViewById(R.id.backward);
         help = findViewById(R.id.help);
+        backButton=findViewById(R.id.back_btn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         questionModelArrayList = new ArrayList<>();
         random = new Random();
