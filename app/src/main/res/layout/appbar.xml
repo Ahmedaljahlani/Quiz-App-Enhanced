@@ -17,7 +17,7 @@
             android:layout_width="30dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="130dp"
-            android:src="@drawable/q" />
+            android:src="@drawable/appbar_icon" />
 
         <TextView
             android:layout_width="wrap_content"

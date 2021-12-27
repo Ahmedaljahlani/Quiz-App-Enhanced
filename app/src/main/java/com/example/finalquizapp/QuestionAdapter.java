@@ -69,6 +69,17 @@ public class QuestionAdapter extends BaseAdapter {
             textView1.setBackgroundColor(convertView.getResources().getColor(android.R.color.holo_red_dark));
             textView1.setTextColor(Color.WHITE);
         }
+//        if (questionModel.getAnswer().trim().equals("Yes")&&questionModel.getOption1().equals("Yes")) {
+//            textView.setBackgroundColor(convertView.getResources().getColor(R.color.blue));
+//            textView.setTextColor(Color.WHITE);
+//            textView1.setBackgroundColor(convertView.getResources().getColor(android.R.color.holo_green_light));
+//            textView1.setTextColor(Color.WHITE);
+//        } else {
+//            textView.setBackgroundColor(convertView.getResources().getColor(R.color.blue));
+//            textView.setTextColor(Color.WHITE);
+//            textView1.setBackgroundColor(convertView.getResources().getColor(android.R.color.holo_red_dark));
+//            textView1.setTextColor(Color.WHITE);
+//        }
 
         return convertView;
     }

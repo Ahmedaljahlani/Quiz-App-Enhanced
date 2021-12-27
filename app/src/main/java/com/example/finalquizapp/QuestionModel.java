@@ -10,15 +10,6 @@ public class QuestionModel implements Parcelable {
     private String option2;
     private String answer;
 
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    String category;
 
     public QuestionModel(String question, String option1, String option2, String answer) {
         this.question = question;

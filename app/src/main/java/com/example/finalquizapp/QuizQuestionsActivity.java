@@ -52,7 +52,8 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         setDataToView(current);
 
         subjectTitle.setText(category);
-        passedQuestions = new ArrayList<QuestionModel>();
+        passedQuestions = new ArrayList<>();
+
 
         backward.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -85,7 +86,7 @@ public class QuizQuestionsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //helping answer
-                if (chance <= 1) {
+                if (chance <= 3) {
                     chance++;
                     String helpAnswer;
                     helpAnswer = questionModelArrayList.get(current).getAnswer().trim().toString();
@@ -122,7 +123,7 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         optionBtnFalse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (questionModelArrayList.get(current).getAnswer().trim().toLowerCase().equals(optionBtnFalse.getText().toString().trim().toLowerCase())) {
+                if (!questionModelArrayList.get(current).getAnswer().trim().toLowerCase().equals(optionBtnFalse.getText().toString().trim().toLowerCase())) {
                     currentScore++;
                 }
                 passedQuestions.add(questionModelArrayList.get(current));

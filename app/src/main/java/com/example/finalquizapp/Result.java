@@ -83,18 +83,8 @@ public class Result extends AppCompatActivity {
             }
         });
 
-        TextView help = (TextView) findViewById(R.id.help);
-        help.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent intent=new Intent(Result.this,Help.class);
-//                startActivity(intent);
-            }
-        });
-
-
-        ImageView retryQuizz = (ImageView) findViewById(R.id.reTryingQuizz);
-        retryQuizz.setOnClickListener(new View.OnClickListener() {
+        ImageView retryQuiz = (ImageView) findViewById(R.id.reTryingQuizz);
+        retryQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Intent intent = new Intent(Result.this, YourAnswers.class);
