@@ -25,7 +25,7 @@ public class QuizQuestionsActivity extends AppCompatActivity {
     Random random;
     int currentScore = 0, questionAttempted = 0, current = 0, previous;
 
-    private ImageView backward, forward, help,backButton;
+    private ImageView backward, forward, help, backButton, about;
     int chance = 1;
 
 
@@ -41,7 +41,8 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         optionBtnFalse = findViewById(R.id.optionFalse);
         backward = findViewById(R.id.backward);
         help = findViewById(R.id.help);
-        backButton=findViewById(R.id.back_btn);
+        backButton = findViewById(R.id.back_btn);
+        about = findViewById(R.id.app_icon);
 
         questionModelArrayList = new ArrayList<>();
         random = new Random();
@@ -54,16 +55,21 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         subjectTitle.setText(category);
         passedQuestions = new ArrayList<>();
 
+        previous = 0;
 
         backward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (questionAttempted >= 1 && questionAttempted <= 10 || optionBtnTrue.isPressed() && optionBtnFalse.isPressed()) {
-                    previous = random.nextInt(passedQuestions.size());
+
+                if (previous > 0) {
+                    previous--;
                     setDataToView(previous);
                 } else {
-//                    previous++;
-                    Toast.makeText(QuizQuestionsActivity.this, "No passed Questions", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(QuizQuestionsActivity.this, "no questions", Toast.LENGTH_SHORT).show();
+                }
+
+                if (passedQuestions.size() <= previous) {
+                    Toast.makeText(QuizQuestionsActivity.this, "No Questions to show", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -72,25 +78,24 @@ public class QuizQuestionsActivity extends AppCompatActivity {
         forward.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (questionAttempted > 1 || optionBtnTrue.isPressed() && optionBtnFalse.isPressed()) {
-                    questionModelArrayList = QuestionBank.getQuestions(category);
-                    current = random.nextInt(passedQuestions.size());
-                    questionNumber.setText("Question Attempted:" + questionAttempted + "/10");
-                    questionTV.setText(passedQuestions.get(current).getQuestion());
-                } else {
-                    Toast.makeText(QuizQuestionsActivity.this, "Please check your answers", Toast.LENGTH_SHORT).show();
-                }
+                questionModelArrayList.get(current);
+                setDataToView(current);
             }
         });
         help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //helping answer
-                if (chance <= 3) {
+                if (chance <= 4) {
                     chance++;
                     String helpAnswer;
-                    helpAnswer = questionModelArrayList.get(current).getAnswer().trim().toString();
+                    String currentQuestion;
+
+                    currentQuestion = String.valueOf(questionModelArrayList.get(current).getQuestion());
+                    helpAnswer = String.valueOf(questionModelArrayList.get(current).isAnswer());
+
                     Intent intent = new Intent(QuizQuestionsActivity.this, Help.class);
+                    intent.putExtra("helpQuestion", currentQuestion);
                     intent.putExtra("help", helpAnswer);
                     startActivity(intent);
                 } else {
@@ -107,53 +112,80 @@ public class QuizQuestionsActivity extends AppCompatActivity {
             }
         });
 
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(QuizQuestionsActivity.this, About.class);
+                startActivity(intent);
+            }
+        });
+
         optionBtnTrue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (questionModelArrayList.get(current).getAnswer().trim().toLowerCase().equals(optionBtnTrue.getText().toString().trim().toLowerCase())) {
+                if (questionModelArrayList.get(current).isAnswer()) {
                     currentScore++;
+                    questionModelArrayList.get(current).setUserAnswer(true);
+                } else {
+                    questionModelArrayList.get(current).setUserAnswer(false);
                 }
+                previous++;
                 passedQuestions.add(questionModelArrayList.get(current));
                 questionAttempted++;
-                current = random.nextInt(questionModelArrayList.size());
-                setDataToView(current);
+                shuffleQuestions();
             }
         });
 
         optionBtnFalse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!questionModelArrayList.get(current).getAnswer().trim().toLowerCase().equals(optionBtnFalse.getText().toString().trim().toLowerCase())) {
+                if (!questionModelArrayList.get(current).isAnswer()) {
                     currentScore++;
+                    questionModelArrayList.get(current).setUserAnswer(true);
+                } else {
+                    questionModelArrayList.get(current).setUserAnswer(false);
                 }
+                previous++;
                 passedQuestions.add(questionModelArrayList.get(current));
                 questionAttempted++;
-                current = random.nextInt(questionModelArrayList.size());
-                setDataToView(current);
+                shuffleQuestions();
             }
         });
 
     }
 
+    private void shuffleQuestions() {
+        if (questionAttempted <= 10) {
+            for (int i = 0; i < passedQuestions.size(); i++) {
+                if (passedQuestions.get(i) == questionModelArrayList.get(current)) {
+                    questionModelArrayList.remove(current);
+                }
+            }
+            current = random.nextInt(questionModelArrayList.size());
+            setDataToView(current);
+        } else {
+            Toast.makeText(QuizQuestionsActivity.this, "All Passed", Toast.LENGTH_SHORT).show();
+        }
+
+    }
+
     private void setDataToView(int current) {
-        questionNumber.setText("Question Attempted:" + questionAttempted + "/10");
+        questionNumber.setText("Questions Attempted:" + questionAttempted + "/10");
         TextView scores = (TextView) findViewById(R.id.scores);
         scores.setVisibility(View.INVISIBLE);
         //displaying scores
         scores.setText("" + currentScore);
 
-        String category=getIntent().getStringExtra("category");
+        String category = getIntent().getStringExtra("category");
         if (questionAttempted == 10) {
             Intent intent = new Intent(QuizQuestionsActivity.this, Result.class);
-            intent.putParcelableArrayListExtra("Pairs", passedQuestions);
+            intent.putExtra("Pairs", passedQuestions);
             intent.putExtra("Scores", scores.getText());
-            intent.putExtra("category",category);
+            intent.putExtra("category", category);
             startActivity(intent);
-            this.finish();
+            finish();
         } else {
             questionTV.setText(questionModelArrayList.get(current).getQuestion());
-            optionBtnTrue.setText(questionModelArrayList.get(current).getOption1());
-            optionBtnFalse.setText(questionModelArrayList.get(current).getOption2());
         }
 
     }

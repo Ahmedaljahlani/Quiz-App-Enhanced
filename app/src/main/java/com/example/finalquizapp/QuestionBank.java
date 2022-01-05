@@ -8,15 +8,17 @@ public class QuestionBank {
 
         final ArrayList<QuestionModel> questionModelArrayList=new ArrayList<>();
 
-        questionModelArrayList.add(new QuestionModel("Am I your friend?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Were they happy?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Was his house on an island?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", "Yes", "No", "No"));
+        questionModelArrayList.add(new QuestionModel("Am I your friend?", true));
+        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", false));
+        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", true));
+        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", false));
+        questionModelArrayList.add(new QuestionModel("Were they happy?", true));
+        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", false));
+        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", false));
+        questionModelArrayList.add(new QuestionModel("Was his house on an island?", true));
+        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", false));
+        questionModelArrayList.add(new QuestionModel("The function f(x)=sqrt(x+1)?", true));
+        questionModelArrayList.add(new QuestionModel("The product of two positive numbers is NOT positive?", false));
 
         return questionModelArrayList;
     }
@@ -24,31 +26,34 @@ public class QuestionBank {
 
         final ArrayList<QuestionModel> questionModelArrayList=new ArrayList<>();
 
-        questionModelArrayList.add(new QuestionModel("Am I your friend?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Were they happy?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Was his house on an island?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", "Yes", "No", "No"));
-
+        questionModelArrayList.add(new QuestionModel("Am I your friend?", true));
+        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", false));
+        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", true));
+        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", false));
+        questionModelArrayList.add(new QuestionModel("Were they happy?", true));
+        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", false));
+        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", false));
+        questionModelArrayList.add(new QuestionModel("Was his house on an island?", true));
+        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", false));
+        questionModelArrayList.add(new QuestionModel("The function f(x)=sqrt(x+1)?", true));
+        questionModelArrayList.add(new QuestionModel("The product of two positive numbers is NOT positive?", false));
         return questionModelArrayList;
     }
     private static ArrayList<QuestionModel> ArtificialIntelligenceQuestions(){
 
         final ArrayList<QuestionModel> questionModelArrayList=new ArrayList<>();
 
-        questionModelArrayList.add(new QuestionModel("Am I your friend?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Were they happy?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Was his house on an island?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", "Yes", "No", "No"));
+        questionModelArrayList.add(new QuestionModel("Am I your friend?", true));
+        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", false));
+        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", true));
+        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", false));
+        questionModelArrayList.add(new QuestionModel("Were they happy?", true));
+        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", false));
+        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", false));
+        questionModelArrayList.add(new QuestionModel("Was his house on an island?", true));
+        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", false));
+        questionModelArrayList.add(new QuestionModel("The function f(x)=sqrt(x+1)?", true));
+        questionModelArrayList.add(new QuestionModel("The product of two positive numbers is NOT positive?", false));
 
         return questionModelArrayList;
     }
@@ -56,15 +61,17 @@ public class QuestionBank {
 
         final ArrayList<QuestionModel> questionModelArrayList=new ArrayList<>();
 
-        questionModelArrayList.add(new QuestionModel("Am I your friend?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Were they happy?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Was his house on an island?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", "Yes", "No", "No"));
+        questionModelArrayList.add(new QuestionModel("Am I your friend?", true));
+        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", false));
+        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", true));
+        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", false));
+        questionModelArrayList.add(new QuestionModel("Were they happy?", true));
+        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", false));
+        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", false));
+        questionModelArrayList.add(new QuestionModel("Was his house on an island?", true));
+        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", false));
+        questionModelArrayList.add(new QuestionModel("The function f(x)=sqrt(x+1)?", true));
+        questionModelArrayList.add(new QuestionModel("The product of two positive numbers is NOT positive?", false));
 
         return questionModelArrayList;
     }
@@ -73,15 +80,17 @@ public class QuestionBank {
 
         final ArrayList<QuestionModel> questionModelArrayList=new ArrayList<>();
 
-        questionModelArrayList.add(new QuestionModel("Am I your friend?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Were they happy?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Was his house on an island?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", "Yes", "No", "No"));
+        questionModelArrayList.add(new QuestionModel("Am I your friend?", true));
+        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", false));
+        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", true));
+        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", false));
+        questionModelArrayList.add(new QuestionModel("Were they happy?", true));
+        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", false));
+        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", false));
+        questionModelArrayList.add(new QuestionModel("Was his house on an island?", true));
+        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", false));
+        questionModelArrayList.add(new QuestionModel("The function f(x)=sqrt(x+1)?", true));
+        questionModelArrayList.add(new QuestionModel("The product of two positive numbers is NOT positive?", false));
 
         return questionModelArrayList;
     }
@@ -90,15 +99,17 @@ public class QuestionBank {
 
         final ArrayList<QuestionModel> questionModelArrayList=new ArrayList<>();
 
-        questionModelArrayList.add(new QuestionModel("Am I your friend?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Were they happy?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", "Yes", "No", "No"));
-        questionModelArrayList.add(new QuestionModel("Was his house on an island?", "Yes", "No", "Yes"));
-        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", "Yes", "No", "No"));
+        questionModelArrayList.add(new QuestionModel("Am I your friend?", true));
+        questionModelArrayList.add(new QuestionModel("Is this a good restaurant?", false));
+        questionModelArrayList.add(new QuestionModel("Are these islands Greek?", true));
+        questionModelArrayList.add(new QuestionModel("Was his idea interesting?", false));
+        questionModelArrayList.add(new QuestionModel("Were they happy?", true));
+        questionModelArrayList.add(new QuestionModel("Am I at the correct location?", false));
+        questionModelArrayList.add(new QuestionModel("Are the keys under the books?", false));
+        questionModelArrayList.add(new QuestionModel("Was his house on an island?", true));
+        questionModelArrayList.add(new QuestionModel("Were the demonstrations in the center of town?", false));
+        questionModelArrayList.add(new QuestionModel("The function f(x)=sqrt(x+1)?", true));
+        questionModelArrayList.add(new QuestionModel("The product of two positive numbers is NOT positive?", false));
 
         return questionModelArrayList;
     }

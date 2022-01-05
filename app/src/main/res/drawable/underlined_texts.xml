@@ -7,10 +7,10 @@
         android:topRightRadius="20sp"
         android:topLeftRadius="20sp"
         android:radius="0dp" />
-    <solid android:color="@color/green" />
+    <solid android:color="@color/blue" />
 
 <!--    <stroke-->
-<!--        android:width="1px"-->
-<!--        android:color="#000" />-->
+<!--        android:width="2.5px"-->
+<!--        android:color="#E53935" />-->
 
 </shape>

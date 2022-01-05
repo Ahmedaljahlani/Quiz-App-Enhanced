@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int SPLASH_SCREEN = 1000;
+    private final int SPLASH_SCREEN = 1000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         }, SPLASH_SCREEN);
+
 
     }
 }

@@ -1,6 +1,9 @@
 package com.example.finalquizapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,15 @@ public class SubjectsActivity extends AppCompatActivity {
 
         myAdapter = new MyAdapter(this, getMyList());
         recyclerView.setAdapter(myAdapter);
+
+        ImageView imageView=findViewById(R.id.app_icon);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(SubjectsActivity.this,About.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

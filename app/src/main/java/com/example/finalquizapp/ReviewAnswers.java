@@ -1,19 +1,20 @@
 package com.example.finalquizapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
 public class ReviewAnswers extends AppCompatActivity {
 
     public static final String ExtraData = "EXTRA_DATA";
-
-    public TextView question1, question2, question3, question4, question5, question6, question7, question8, question9, question10;
-    public TextView answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8, answer9, answer10;
     public ArrayList<QuestionModel> questionModelArrayList;
 
     @Override
@@ -21,9 +22,19 @@ public class ReviewAnswers extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_review_answers);
 
-        questionModelArrayList = this.getIntent().getParcelableArrayListExtra("Pairs");
-        ListView listView = findViewById(R.id.listView);
+        questionModelArrayList= (ArrayList<QuestionModel>) this.getIntent().getExtras().getSerializable("Pairs");
+        RecyclerView recyclerView = findViewById(R.id.listView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         QuestionAdapter questionAdapter = new QuestionAdapter(ReviewAnswers.this, questionModelArrayList);
-        listView.setAdapter(questionAdapter);
+        recyclerView.setAdapter(questionAdapter);
+
+
+        ImageView backButton=findViewById(R.id.back_btn);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

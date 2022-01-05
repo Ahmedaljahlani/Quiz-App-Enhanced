@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".ReviewAnswers">
+    <include layout="@layout/appbar"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,13 +14,10 @@
         android:text="Answers Review"
         android:textSize="30dp" />
 
-    <ListView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="20sp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="20sp"
-        android:layout_marginBottom="10dp" />
+       android:layout_margin="20sp"/>
 
 </LinearLayout>

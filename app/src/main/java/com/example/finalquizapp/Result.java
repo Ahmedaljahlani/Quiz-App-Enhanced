@@ -9,6 +9,8 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -27,10 +29,11 @@ public class Result extends AppCompatActivity {
 
         ratingBar = findViewById(R.id.rating_bar);
 
-        questionModelArrayList = this.getIntent().getParcelableArrayListExtra("Pairs");
-        ListView listView = findViewById(R.id.listView);
+        questionModelArrayList = (ArrayList<QuestionModel>) this.getIntent().getExtras().getSerializable("Pairs");
+        RecyclerView recyclerView = findViewById(R.id.listView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
         QuestionAdapter questionAdapter = new QuestionAdapter(Result.this, questionModelArrayList);
-        listView.setAdapter(questionAdapter);
+        recyclerView.setAdapter(questionAdapter);
 //        listView.setVisibility(View.INVISIBLE);
 
         questionNumber = findViewById(R.id.idTVQuestionAttempted);
@@ -78,7 +81,7 @@ public class Result extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Result.this, ReviewAnswers.class);
-                intent.putParcelableArrayListExtra("Pairs", questionModelArrayList);
+                intent.putExtra("Pairs", questionModelArrayList);
                 startActivity(intent);
             }
         });
