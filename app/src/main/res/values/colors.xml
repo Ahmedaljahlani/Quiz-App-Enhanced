@@ -10,4 +10,5 @@
     <color name="blue">#03b6d4</color>
     <color name="green">#00FF00</color>
     <color name="red">#FF0000</color>
+    <color name="appbar_text">#BF000000</color>
 </resources>

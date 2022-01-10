@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
@@ -41,7 +40,7 @@ public class Result extends AppCompatActivity {
         questionNumber.setText(scores);
 
 
-        String category=getIntent().getStringExtra("category");
+        String category = getIntent().getStringExtra("category");
 
         switch (scores) {
             case "1":
@@ -96,11 +95,12 @@ public class Result extends AppCompatActivity {
 //                finish();
 //
                 Intent intent = new Intent(Result.this, QuizQuestionsActivity.class);
-                intent.putExtra("category",category);
+                intent.putExtra("category", category);
                 startActivity(intent);
                 finish();
             }
         });
+
         ImageView appHomeScreen = (ImageView) findViewById(R.id.homeScreen);
         appHomeScreen.setOnClickListener(new View.OnClickListener() {
             @Override

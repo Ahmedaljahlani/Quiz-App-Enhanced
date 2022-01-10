@@ -14,59 +14,83 @@
         android:layout_marginTop="40dp"
         android:text="ABOUT"
         android:textSize="40dp" />
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
         android:layout_marginTop="40dp"
+        android:layout_marginEnd="15dp"
         app:cardCornerRadius="12dp">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
             android:layout_marginTop="20sp"
-            android:layout_marginBottom="20sp">
+            android:layout_marginBottom="20sp"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
                 android:text="Phone"
-                android:textSize="40dp"
-                android:layout_gravity="center"/>
+                android:textColor="@color/blue"
+                android:textSize="30dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="20sp"
-                android:text="+967 777777777"/>
+                android:text="+967 777777777"
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
                 android:text="Email"
-                android:textSize="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"/>
+                android:textColor="@color/blue"
+                android:textSize="30dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="20sp"
-                android:text="QuizApp@gmail.com"/>
+                android:text="QuizApp@gmail.com"
+                android:textSize="20sp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20sp"
                 android:text="Website"
-                android:textSize="40dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="20sp"/>
+                android:textColor="@color/blue"
+                android:textSize="30dp" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:textSize="20sp"
-                android:text="WWW.QuizApp.com" />
+                android:text="WWW.QuizApp.com"
+                android:textSize="20sp" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center"
+            android:text="Made By Platform co" />
+    </RelativeLayout>
 </LinearLayout>

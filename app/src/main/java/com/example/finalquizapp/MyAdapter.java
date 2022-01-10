@@ -47,6 +47,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder> {
                 intent.putExtra("category", models.get(i).getCategory());
                 intent.putExtra("SubjectName", models.get(i).getTitle());
                 context.startActivity(intent);
+                ((Activity) context).finish();
             }
         });
     }
