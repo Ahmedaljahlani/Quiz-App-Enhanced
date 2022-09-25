@@ -1,4 +1,4 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.ui.main;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,6 +9,10 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.finalquizapp.ItemClickListener;
+import com.example.finalquizapp.R;
+import com.example.finalquizapp.pojo.Model;
 
 import java.util.ArrayList;
 

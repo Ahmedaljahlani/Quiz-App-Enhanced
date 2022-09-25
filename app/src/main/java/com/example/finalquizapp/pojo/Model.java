@@ -1,4 +1,4 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.pojo;
 
 public class Model {
     private int id;

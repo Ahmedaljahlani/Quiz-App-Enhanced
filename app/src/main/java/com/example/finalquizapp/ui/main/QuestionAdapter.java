@@ -1,4 +1,4 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.ui.main;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -9,6 +9,9 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.finalquizapp.R;
+import com.example.finalquizapp.pojo.QuestionModel;
 
 import java.util.ArrayList;
 

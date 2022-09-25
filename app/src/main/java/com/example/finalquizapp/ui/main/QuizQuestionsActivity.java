@@ -1,4 +1,4 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.finalquizapp.R;
+import com.example.finalquizapp.data.QuestionBank;
+import com.example.finalquizapp.pojo.QuestionModel;
 
 import java.util.ArrayList;
 import java.util.Random;

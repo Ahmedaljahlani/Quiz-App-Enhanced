@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Result">
+    tools:context=".ui.main.Result">
 
     <RatingBar
         android:id="@+id/rating_bar"

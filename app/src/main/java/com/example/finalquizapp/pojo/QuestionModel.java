@@ -1,4 +1,4 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.pojo;
 
 import android.os.Parcel;
 import android.os.Parcelable;

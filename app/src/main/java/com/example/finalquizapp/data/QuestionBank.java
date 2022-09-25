@@ -1,4 +1,6 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.data;
+
+import com.example.finalquizapp.pojo.QuestionModel;
 
 import java.util.ArrayList;
 

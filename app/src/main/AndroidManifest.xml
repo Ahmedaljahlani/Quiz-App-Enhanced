@@ -10,31 +10,31 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
-            android:name=".About"
+            android:name=".ui.main.About"
             android:exported="false"
             android:screenOrientation="locked" />
         <activity
-            android:name=".Help"
+            android:name=".ui.main.Help"
             android:exported="false"
             android:screenOrientation="locked" />
         <activity
-            android:name=".ReviewAnswers"
+            android:name=".ui.main.ReviewAnswers"
             android:exported="false"
             android:screenOrientation="locked" />
         <activity
-            android:name=".Result"
+            android:name=".ui.main.Result"
             android:exported="false"
             android:screenOrientation="locked" />
         <activity
-            android:name=".QuizQuestionsActivity"
+            android:name=".ui.main.QuizQuestionsActivity"
             android:exported="false"
             android:screenOrientation="locked" />
         <activity
-            android:name=".SubjectsActivity"
+            android:name=".ui.main.SubjectsActivity"
             android:exported="false"
             android:screenOrientation="locked" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:screenOrientation="locked">
             <intent-filter>

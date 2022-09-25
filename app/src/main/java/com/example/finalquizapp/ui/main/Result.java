@@ -1,4 +1,4 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.ui.main;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.finalquizapp.R;
+import com.example.finalquizapp.pojo.QuestionModel;
 
 import java.util.ArrayList;
 

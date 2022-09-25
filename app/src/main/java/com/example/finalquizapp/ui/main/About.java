@@ -1,9 +1,11 @@
-package com.example.finalquizapp;
+package com.example.finalquizapp.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.example.finalquizapp.R;
 
 public class About extends AppCompatActivity {
 
